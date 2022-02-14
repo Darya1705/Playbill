@@ -64,7 +64,7 @@ class FilmManagerTest {
     }
 
     @Test
-    public void getAll() {
+    public void findLast() {
         AddendumFilm first = new AddendumFilm(1, 1, "Bloodshot", "action movie", 500);
         AddendumFilm second = new AddendumFilm(2, 2, "Forward", "cartoon", 350);
         AddendumFilm third = new AddendumFilm(3, 3, "Hotel Belgrade", "comedy", 50);
@@ -84,13 +84,13 @@ class FilmManagerTest {
         managers.save(tenth);
 
         AddendumFilm[] expected = {tenth, ninth, eighth, seventh, sixth};
-        AddendumFilm[] actual = managers.getAll();
+        AddendumFilm[] actual = managers.findLast();
 
         assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void getAll2() {
+    public void findLast2() {
         AddendumFilm first = new AddendumFilm(1, 1, "Bloodshot", "action movie", 500);
         AddendumFilm second = new AddendumFilm(2, 2, "Forward", "cartoon", 350);
         AddendumFilm third = new AddendumFilm(3, 3, "Hotel Belgrade", "comedy", 50);
@@ -109,7 +109,7 @@ class FilmManagerTest {
         managers.save(fourth);
 
         AddendumFilm[] expected = { fourth, third, second, first};
-        AddendumFilm[] actual = managers.getAll();
+        AddendumFilm[] actual = managers.findLast();
 
         assertArrayEquals(expected, actual);
     }

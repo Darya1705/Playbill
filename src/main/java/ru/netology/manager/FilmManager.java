@@ -24,7 +24,7 @@ public class FilmManager {
         return items;
     }
 
-    public AddendumFilm[] getAll() {
+    public AddendumFilm[] findLast() {
         int resultLength = items.length;
         int lastIndex = 10;
         if (resultLength > lastIndex) {
