@@ -8,9 +8,9 @@ public class FilmManager {
     public void save(AddendumFilm item) {
         int length = items.length + 1; //создаем новый массив на единицу больше
         AddendumFilm[] tmp = new AddendumFilm[length]; // создали временный массив
-        for (int i = 0; i < items.length; i++) { //сделали цикл
-            tmp[i] = items[i];
-        }
+        // for (int i = 0; i < items.length; i++) { //сделали цикл
+        //    tmp[i] = items[i];
+        //  }
         System.arraycopy(items, 0, tmp, 0, items.length); //указали откуда и куда копируем
         int lastIndex = tmp.length - 1; //вычисляем последнюю ячейку нового массива и ее заполняем
         tmp[lastIndex] = item; // вычисляем элемент
@@ -18,9 +18,8 @@ public class FilmManager {
     }
 
     public AddendumFilm[] findAll() {
-        int[] film = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        for (int i = film.length - 1; i <= 0; i--) {
-        }
+        //int[] film = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        //for (int i = film.length - 1; i <= 0; i--) {
         return items;
     }
 

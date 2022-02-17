@@ -108,7 +108,7 @@ class FilmManagerTest {
         managers.save(third);
         managers.save(fourth);
 
-        AddendumFilm[] expected = { fourth, third, second, first};
+        AddendumFilm[] expected = {fourth, third, second, first};
         AddendumFilm[] actual = managers.findLast();
 
         assertArrayEquals(expected, actual);
